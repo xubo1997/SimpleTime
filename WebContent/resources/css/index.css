@@ -1,0 +1,67 @@
+.book_div,.movie_div,.music_div,.article_div{
+	padding:30px 0;
+	clear:both;
+	overflow:hidden;
+}
+.group_left{
+	float:left;
+	margin:0 10px;
+}
+.group_middle{
+	float:left;
+	margin-left:40px;
+	width:550px;
+}
+.group_middle .title{
+	text-align: center;
+	font-size: 12px;
+	margin-top:10px;
+	white-space:pre-wrap;
+}
+.group_middle .title a{
+	color:#614e3c;
+}
+.group_middle .author{
+	text-align: center;
+	font-size: 14px;
+}
+.group_middle .author a{
+	color:#000;
+}
+.book_div .group_middle img{
+	width:106px;
+	height:158px;
+}
+.movie_div .group_middle img{
+	width:100px;
+	height:141px;
+}
+.group_right{
+	float:left;
+	margin:0 10px;
+}
+.group_middle>div>ul>li{
+	float:left;
+	margin-right:30px;
+	margin-bottom:20px;
+	
+}
+.group_right>div>ul>li{
+	float:left;
+	margin-right:10px;
+	margin-bottom:40px;
+}
+
+.movie_div,.article_div{
+	background:#f7f7f7;
+}
+.movie_div .am-list > li{
+	background-color: #f7f7f7;
+}
+.article_div .am-list > li{
+	background-color: #f7f7f7;
+}
+.am-list > li {
+    border: 0;
+}
+

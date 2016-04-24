@@ -1,0 +1,6 @@
+li {list-style-type:none;}
+ul{padding-left:0;}
+.widthlimit{
+	width: 1024px; 
+	margin: 0 auto;
+}
