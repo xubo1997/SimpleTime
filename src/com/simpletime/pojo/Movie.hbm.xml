@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.simpletime.pojo.Movie" table="movie">
+       <id name="id" type="string" column="id">
+            <generator class="uuid"/>
+       </id>
+       <property name="name" type="java.lang.String" column="name"/>
+       <property name="contentSynopsis" type="java.lang.String" column="contentSynopsis"/>
+       <property name="performer" type="java.lang.String" column="performer" />
+       <property name="director" type="java.lang.String" column="director" />
+       <property name="screenwriter" type="java.lang.String" column="screenwriter" />
+       <property name="area" type="java.lang.String" column="area" />
+       <property name="showTime" type="java.util.Date" column="showTime" />
+       <property name="otherName" type="java.lang.String" column="otherName"/>
+       <property name="type" type="java.lang.String" column="type"/>
+       <property name="photoUrl" type="java.lang.String" column="photoUrl"/>
+       <property name="buileTime" type="java.util.Date" column="buileTime" />
+       <property name="score" type="java.lang.Float" column="score" />
+       <property name="valid" type="java.lang.Boolean" column="valid" />
+       <property name="countPraise" type="java.lang.Integer" column="countpraise" />
+       <property name="countComment" type="java.lang.Integer" column="countcomment" />
+    </class>
+</hibernate-mapping>

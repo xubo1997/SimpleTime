@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.simpletime.pojo.Sign" table="sign">
+       <id name="id" type="java.lang.String" column="id">
+            <generator class="uuid"/>
+       </id>
+       <property name="userId" type="java.lang.String" column="userId"/>
+       <property name="signTime" type="java.util.Date" column="signTime" />
+       <property name="integral" type="java.lang.Integer" column="integral"/>
+    </class>
+</hibernate-mapping>

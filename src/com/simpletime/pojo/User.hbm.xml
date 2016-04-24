@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.simpletime.pojo.User" table="user">
+       <id name="id" type="java.lang.String" column="id">
+            <generator class="uuid"/>
+       </id>
+       <property name="nickName" type="java.lang.String" column="nickname"/>
+       <property name="sex" type="java.lang.Integer" column="sex"/>
+       <property name="email" type="java.lang.String" column="email"/>
+       <property name="phone" type="java.lang.String" column="phone"/>
+       <property name="password" type="java.lang.String" column="password"/>
+       <property name="joinTime" type="java.util.Date" column="jointime" />
+       <property name="photoUrl" type="java.lang.String" column="photourl" />
+       <property name="integral" type="java.lang.Integer" column="integral"/>
+       <property name="lastSignTime" type="java.util.Date" column="lastSignTime" />
+       <property name="countContinuityLogin" type="java.lang.Integer" column="countContinuityLogin"/>
+    </class>
+</hibernate-mapping>

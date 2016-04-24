@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.simpletime.pojo.Article" table="article">
+       <id name="id" type="string" column="id">
+            <generator class="uuid"/>
+       </id>
+       <property name="title" type="java.lang.String" column="title"/>
+       <property name="content" type="java.lang.String" column="content"/>
+       <property name="authorId" type="java.lang.String" column="authorid" />
+       <property name="addTime" type="java.util.Date" column="addtime" />
+       <property name="valid" type="java.lang.Boolean" column="valid" />
+       <property name="countPraise" type="java.lang.Integer" column="countpraise" />
+       <property name="countComment" type="java.lang.Integer" column="countcomment" />
+    </class>
+</hibernate-mapping>

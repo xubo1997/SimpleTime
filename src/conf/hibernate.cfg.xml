@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<!-- 一个session-factory只能连接一个数据库 -->
+	<session-factory>
+
+		<!-- 设置数据库方言 -->
+		<property name="dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		<!-- 作用：根据持久化类和映射文件生成表 validate 只验证不生成 create-drop 当hibernate启动时生成表，hibernate结束时删除表 
+			create 只要启动hibernate时生成表 update 在启动hibernate容器时检查持久化类和映射文件是不是对应，不对应则创建 -->
+		<property name="hbm2ddl.auto">update</property>
+		<!-- 显示hibernate内部生成的sql语句 -->
+		<property name="show_sql">true</property>
+		<property name="connection.pool_size">1</property>
+		<!-- <property name="connection.characterEncoding">utf8</property> -->
+		<!-- 声明映射文件 -->
+		<mapping resource="com/simpletime/pojo/User.hbm.xml" />
+		<mapping resource="com/simpletime/pojo/Article.hbm.xml" />
+		<mapping resource="com/simpletime/pojo/Admin.hbm.xml" />
+		<mapping resource="com/simpletime/pojo/Book.hbm.xml" />
+		<mapping resource="com/simpletime/pojo/Movie.hbm.xml" />
+		<mapping resource="com/simpletime/pojo/Music.hbm.xml" />
+		<mapping resource="com/simpletime/pojo/Sign.hbm.xml" />
+
+
+
+	</session-factory>
+</hibernate-configuration>  

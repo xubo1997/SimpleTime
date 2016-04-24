@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="user" namespace="/user" extends="struts-default,json-default">
+        <!-- 定义一个拦截器 -->  
+        <!-- <interceptors>  
+            <interceptor name="authority"  
+                class="com.simpletime.interceptor.LoginInterceptor">  
+            </interceptor>  
+            拦截器栈  
+            <interceptor-stack name="mydefault">  
+                <interceptor-ref name="defaultStack" />  
+                <interceptor-ref name="authority" />  
+            </interceptor-stack>  
+        </interceptors> -->
+        <!-- 配置roleAction -->
+        <action name="user_*" class="com.simpletime.action.UserAction" method="{1}">
+            <result name="success">/index.jsp</result>
+            <result name="get" type="json" >
+                <param name="root">resultJson</param>
+            </result>
+        </action>
+    </package>
+</struts>
